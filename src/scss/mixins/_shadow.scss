@@ -9,7 +9,7 @@
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
   -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
   zoom: 1;
-  @include transition-ease-out(all 0.2s);
+  @include transition-ease-out(box-shadow 0.2s);
 
   &.hoverable{
     &:hover {

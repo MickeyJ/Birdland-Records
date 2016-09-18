@@ -95,11 +95,28 @@ body .row::after {
   clear: both;
 }
 
-.artist-link {
-  box-sizing: border-box;
+html .row::after,
+body .row::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.artist-link img {
+.artist-link {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 100%;
+}
+
+.artist-link .artist-name {
+  visibility: hidden;
+  color: #656565;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.artist-link .image-container {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
   -o-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
@@ -107,28 +124,57 @@ body .row::after {
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
   -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
   zoom: 1;
-  -webkit-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -moz-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -o-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -webkit-transition: box-shadow 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -moz-transition: box-shadow 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -o-transition: box-shadow 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  transition: box-shadow 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -webkit-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -moz-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -o-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
   width: 100%;
+  height: 100%;
 }
 
-.artist-link img.hoverable:hover {
+.artist-link .image-container.hoverable:hover {
   -webkit-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
   -o-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
   box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
 }
 
-.artist-link .artist-name {
-  color: #656565;
-  font-size: 12px;
-  font-weight: 200;
+.artist-link .image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.artist-link .image-container .artist-link-overlay {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  line-height: 1400%;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.53);
+  -webkit-transition: top 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -o-transition: top 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  transition: top 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -webkit-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -moz-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -o-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+}
+
+.artist-link .image-container:hover .artist-link-overlay {
+  top: 0;
 }
 
 html .row::after,
@@ -759,10 +805,10 @@ body .shadow {
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
   -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
   zoom: 1;
-  -webkit-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -moz-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -o-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -webkit-transition: box-shadow 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -moz-transition: box-shadow 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -o-transition: box-shadow 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  transition: box-shadow 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -webkit-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -moz-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -o-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);

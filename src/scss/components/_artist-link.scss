@@ -1,17 +1,49 @@
 @import '../mixins/shadow';
+@import '../mixins/general';
+@import '../mixins/transition';
 
 .artist-link{
-
-  box-sizing: border-box;
-
-  img{
-    @include box-shadow;
-    width: 100%;
-  }
+  @include crossBrowser(box-sizing, border-box);
+  height: 100%;
 
   .artist-name{
+    visibility: hidden;
     color: #656565;
     font-size: 12px;
     font-weight: 200;
   }
+
+  .image-container{
+    @include box-shadow;
+    @include crossBrowser(box-sizing, border-box);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .artist-link-overlay{
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      line-height: 1400%;
+      text-align: center;
+      position: absolute;
+      top: 100%; left: 0;
+      background: rgba(255, 255, 255, 0.53);
+      @include transition-bezier(top 0.2s)
+    }
+
+    &:hover{
+      .artist-link-overlay{
+        top: 0;
+      }
+    }
+  }
+
 }
