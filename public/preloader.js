@@ -54,6 +54,6 @@ window.addEventListener('load', (e) =>{
       x.style.visibility = 'visible'
     });
 
-  }, (Date.now()-timerStartLoad) * 2);
+  }, (Date.now()-timerStartLoad));
 
 });
