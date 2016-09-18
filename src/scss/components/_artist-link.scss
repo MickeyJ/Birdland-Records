@@ -1,7 +1,11 @@
+@import '../mixins/shadow';
 
 .artist-link{
+
   box-sizing: border-box;
+
   img{
+    @include box-shadow;
     width: 100%;
   }
 

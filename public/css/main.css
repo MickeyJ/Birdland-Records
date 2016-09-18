@@ -100,7 +100,29 @@ body .row::after {
 }
 
 .artist-link img {
+  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
+  -o-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+  zoom: 1;
+  -webkit-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -moz-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -o-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -webkit-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -moz-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -o-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   width: 100%;
+}
+
+.artist-link img.hoverable:hover {
+  -webkit-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
 }
 
 .artist-link .artist-name {
@@ -129,10 +151,10 @@ body .row::after {
 
 #birdland-logo-container svg {
   cursor: pointer;
-  -webkit-transition: -webkit-filter 0.1s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -moz-transition: -webkit-filter 0.1s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -o-transition: -webkit-filter 0.1s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  transition: -webkit-filter 0.1s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -webkit-transition: -webkit-filter 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -moz-transition: -webkit-filter 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -o-transition: -webkit-filter 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  transition: -webkit-filter 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -webkit-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -moz-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -o-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
@@ -730,10 +752,10 @@ body .row .col-12:last-child {
 
 html .shadow,
 body .shadow {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
+  -o-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
   -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
   zoom: 1;
@@ -750,26 +772,10 @@ body .shadow {
 
 html .shadow.hoverable:hover,
 body .shadow.hoverable:hover {
-  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
-  -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
-  -o-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
-}
-
-html .shadow.clickable:focus,
-body .shadow.clickable:focus {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-html .shadow.focusable:focus,
-body .shadow.focusable:focus {
-  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
-  -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
-  -o-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25), 2px 5px 5px rgba(0, 0, 0, 0.22);
 }
 
 #wrapper {
@@ -811,7 +817,7 @@ body .shadow.focusable:focus {
 }
 
 #site-footer #social-icons {
-  margin-left: 35%;
+  margin-left: 34.5%;
   height: 50px;
   text-align: center;
 }
