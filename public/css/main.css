@@ -192,21 +192,20 @@ body .row::after {
   margin-left: -75px;
   width: 150px;
   height: 150px;
-}
-
-#birdland-logo-container svg {
   cursor: pointer;
-  -webkit-transition: -webkit-filter 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -moz-transition: -webkit-filter 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -o-transition: -webkit-filter 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  transition: -webkit-filter 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -webkit-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -moz-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -o-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -webkit-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -moz-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   -o-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
   transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
 }
 
-#birdland-logo-container svg:hover {
+#birdland-logo-container:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
   -webkit-filter: drop-shadow(1px 1px 3px rgba(100, 100, 100, 0.8));
   filter: drop-shadow(1px 1px 3px rgba(100, 100, 100, 0.88));
 }

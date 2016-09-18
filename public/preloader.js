@@ -55,19 +55,15 @@ window.addEventListener('load', function(){
   artistNames = document.querySelectorAll('.artist-name');
   overlays = document.querySelectorAll('.artist-link-overlay');
 
+  console.log(imageContainers);
+
   setTimeout(function(){
 
-    imageContainers.map(function(x, i){
-      x.appendChild(artists[i])
-    });
-
-    artistNames.map(function(x){
-      x.style.visibility = 'visible'
-    });
-
-    overlays.map(function(x){
-      x.style.visibility = 'visible'
-    });
+    for (var i = 0; i < imageContainers.length; i++) {
+      imageContainers[i].appendChild(artists[i]);
+      artistNames[i].style.visibility = 'visible';
+      overlays[i].style.visibility = 'visible'
+    }
 
   }, windowLoadTime * 1.5);
 
