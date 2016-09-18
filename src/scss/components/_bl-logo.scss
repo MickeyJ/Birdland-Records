@@ -1,0 +1,23 @@
+@import '../mixins/transition';
+@import '../mixins/general';
+
+#birdland-logo-container{
+  @include resetMP;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -75px;
+  width: 150px;
+  height: 150px;
+
+  svg{
+    cursor: pointer;
+    @include transition-ease-out(-webkit-filter 0.1s);
+
+    &:hover{
+      -webkit-filter: drop-shadow( 1px 1px 3px rgba(100, 100, 100, 0.8));
+      filter: drop-shadow( 1px 1px 3px rgba(100, 100, 100, 0.88));
+    }
+  }
+
+}

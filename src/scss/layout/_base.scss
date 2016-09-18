@@ -1,0 +1,81 @@
+@import '../mixins/general';
+@import '../mixins/shadow';
+@import '../variables/font';
+@import '../components/grid';
+@import '../colors/bg-colors';
+@import '../colors/txt-colors';
+@import '../components/artist-link';
+@import '../components/bl-logo';
+
+$top-min-height: 150px;
+
+html,
+body{
+  font-family: $helvetica;
+  -webkit-appearance: none;
+  //@include pad-lat;
+  @include bg-colors;
+  @include txt-colors;
+  @include grid;
+
+  .shadow{
+    @include box-shadow;
+    border: none;
+  }
+}
+
+#wrapper{
+  position: relative;
+  width: 100%;
+  min-height: 99%;
+}
+
+#site-header{
+  position: relative;
+  width: 100%;
+  height: $top-min-height;
+  font-size: 25px;
+}
+
+#main-content{
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: $footer-height;
+}
+
+#artist-thumb-container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.artist-thumb{
+  img{
+    width: 100%;
+  }
+}
+
+#site-footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footer-height;
+  line-height: $footer-height;
+
+  #social-icons{
+    margin-left: 35%;
+    height: $footer-height;
+    text-align: center;
+    img{
+      padding-top: 6px;
+      padding-left: 3px;
+      padding-right: 3px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+}
+
+
