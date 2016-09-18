@@ -37,13 +37,13 @@ gulp.task('sass',() =>{
 });
 
 gulp.task('images',() =>{
-  gulp.src('src/images/**/*.*')
+  gulp.src('src/images/artists/*.*')
     .pipe((imagemin({
       optimizationLevel: 7,
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('./public/images/'));
+    .pipe(gulp.dest('./public/images/artists'));
 });
 
 gulp.task('watch',() =>{
