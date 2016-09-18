@@ -41,9 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   console.log("DOM Ready Time: ", Date.now()-timerStartLoad);
 
-  imageContainers = document.querySelectorAll('.image-container');
-  artistNames = document.querySelectorAll('.artist-name');
-  overlays = document.querySelectorAll('.artist-link-overlay');
+
 
 });
 
@@ -52,6 +50,10 @@ window.addEventListener('load', function(){
   windowLoadTime = Date.now() - timerStartLoad;
 
   console.log("Window Load Time: ", windowLoadTime);
+
+  imageContainers = document.querySelectorAll('.image-container');
+  artistNames = document.querySelectorAll('.artist-name');
+  overlays = document.querySelectorAll('.artist-link-overlay');
 
   setTimeout(function(){
 
