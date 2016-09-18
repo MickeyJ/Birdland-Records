@@ -1,7 +1,6 @@
 
 var timerStartLoad = Date.now();
 
-
 document.addEventListener('DOMContentLoaded', () =>{
   console.log("Time until DOMready: ", Date.now()-timerStartLoad)
 });
@@ -40,11 +39,11 @@ window.addEventListener('load', (e) =>{
   fairylights.src = 'images/artists/FAIRYLIGHTS_2.jpg';
   fairylights.alt = 'THE FAIRYLIGHTS';
 
-  imageContainers.forEach((x, i) =>{
-    x.appendChild(artists[i])
-  });
-
   setTimeout(() =>{
+
+    imageContainers.forEach((x, i) =>{
+      x.appendChild(artists[i])
+    });
 
     artistNames.forEach(x =>{
       x.style.visibility = 'visible'
