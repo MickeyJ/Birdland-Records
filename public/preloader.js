@@ -55,15 +55,15 @@ window.addEventListener('load', function(){
 
   setTimeout(function(){
 
-    imageContainers.forEach((x, i) =>{
+    imageContainers.forEach(function(x, i){
       x.appendChild(artists[i])
     });
 
-    artistNames.forEach(x =>{
+    artistNames.forEach(function(x){
       x.style.visibility = 'visible'
     });
 
-    overlays.forEach(x =>{
+    overlays.forEach(function(x){
       x.style.visibility = 'visible'
     });
 
