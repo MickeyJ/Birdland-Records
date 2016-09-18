@@ -34,7 +34,7 @@ window.addEventListener('load', (e) =>{
     overlays.forEach(x =>{
       x.style.visibility = 'visible'
     });
-  },50);
+  },100);
 
 
 
