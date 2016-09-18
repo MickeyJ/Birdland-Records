@@ -65,7 +65,7 @@ export default class Landing extends Component{
           </div>
 
         </div>
-
+        <script src="preloader.js"></script>
       </DefaultLayout>
     )
   }

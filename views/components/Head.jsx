@@ -9,7 +9,6 @@ const Head = (props) =>(
     <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="css/main.css"/>
-    <script src="scripts.js"></script>
   </head>
 );
 
