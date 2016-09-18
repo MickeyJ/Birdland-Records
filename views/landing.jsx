@@ -3,8 +3,10 @@ import DefaultLayout from './layout'
 
 import ArtistLink from './components/ArtistLink'
 
-export default class Artists extends Component{
+export default class Landing extends Component{
   render() {
+    const {artist_data} = this.props;
+
     return(
       <DefaultLayout
         title={this.props.title}
@@ -15,19 +17,19 @@ export default class Artists extends Component{
           <div className="row">
 
             <ArtistLink
-              pathname="#Britt"
+              pathname={`/${artist_data[0].path}`}
               image_url="images/artists/BRITT_1.jpg"
               artist_name="BRITT MARGIT"
             />
 
             <ArtistLink
-              pathname="#Robyn"
+              pathname={`/${artist_data[1].path}`}
               image_url="images/artists/ROBYN_1.jpg"
               artist_name="ROBYN SHERWELL"
             />
 
             <ArtistLink
-              pathname="#Elise"
+              pathname={`/${artist_data[2].path}`}
               image_url="images/artists/ELISE_2.jpg"
               artist_name="ELISE LEGENDRE"
             />
@@ -37,19 +39,19 @@ export default class Artists extends Component{
           <div className="row">
 
             <ArtistLink
-              pathname="#Cages"
+              pathname={`/${artist_data[3].path}`}
               image_url="images/artists/CAGES_1.jpg"
               artist_name="CAGES OF LIGHT"
             />
 
             <ArtistLink
-              pathname="#Dogwood"
+              pathname={`/${artist_data[4].path}`}
               image_url="images/artists/DOGWOOD_1.jpg"
               artist_name="DOGWOOD HEART"
             />
 
             <ArtistLink
-              pathname="#Fairylights"
+              pathname={`/${artist_data[5].path}`}
               image_url="images/artists/FAIRYLIGHTS_2.jpg"
               artist_name="THE FAIRYLIGHTS"
             />
