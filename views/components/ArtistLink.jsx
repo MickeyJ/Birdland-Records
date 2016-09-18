@@ -6,7 +6,7 @@ const ArtistLink = (props) => (
       <div id={props.id} className="image-container hoverable">
         <img src={props.image_url} alt={props.artist_name} />
         <a href={props.pathname}>
-          <div className="artist-link-overlay">View Page</div>
+          <div className="artist-link-overlay">View Artist</div>
         </a>
       </div>
     <span className="artist-name">

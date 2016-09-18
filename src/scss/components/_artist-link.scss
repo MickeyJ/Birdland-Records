@@ -4,7 +4,6 @@
 
 .artist-link{
   @include crossBrowser(box-sizing, border-box);
-  height: 100%;
 
   .artist-name{
     visibility: hidden;
