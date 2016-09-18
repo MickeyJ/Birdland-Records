@@ -11,11 +11,10 @@
   height: 150px;
   cursor: pointer;
 
-  @include transition-ease-out(all 0.2s);
+  @include transition-ease-out(-webkit-filter 0.2s);
 
   &:hover{
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=50);
     -webkit-filter: drop-shadow( 1px 1px 3px rgba(100, 100, 100, 0.8));
     filter: drop-shadow( 1px 1px 3px rgba(100, 100, 100, 0.88));
   }
