@@ -106,6 +106,7 @@ body .row::after {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  cursor: pointer;
 }
 
 .artist-link .artist-name {
@@ -193,21 +194,19 @@ body .row::after {
   width: 150px;
   height: 150px;
   cursor: pointer;
-  -webkit-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -moz-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -o-transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  transition: all 0.2s cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -webkit-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -moz-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  -o-transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
-  transition-timing-function: cubic-bezier(0.405, 1.04, 0.8, 0.95);
+  -webkit-transition: -webkit-filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -o-transition: -webkit-filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  transition: -webkit-filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -webkit-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -moz-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -o-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
 }
 
 #birdland-logo-container:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  -webkit-filter: drop-shadow(1px 1px 3px rgba(100, 100, 100, 0.8));
-  filter: drop-shadow(1px 1px 3px rgba(100, 100, 100, 0.88));
+  -webkit-filter: drop-shadow(1px 5px 5px rgba(72, 72, 72, 0.62));
+  filter: drop-shadow(1px 5px 5px rgba(72, 72, 72, 0.51));
 }
 
 html,
