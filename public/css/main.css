@@ -111,8 +111,10 @@ body .row::after {
 
 .artist-link .artist-name {
   visibility: hidden;
-  color: #656565;
-  font-size: 12px;
+  display: block;
+  color: #141414;
+  padding: 5px 0;
+  font-size: 14px;
   font-weight: 200;
 }
 
@@ -155,15 +157,6 @@ body .row::after {
 }
 
 .artist-link .image-container .artist-link-overlay {
-  visibility: hidden;
-  width: 100%;
-  height: 100%;
-  line-height: 1400%;
-  text-align: center;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(255, 255, 255, 0.53);
   -webkit-transition: top 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
   -o-transition: top 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
   transition: top 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
@@ -171,6 +164,35 @@ body .row::after {
   -moz-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
   -o-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
   transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.56);
+  z-index: 100;
+}
+
+.artist-link .image-container .artist-link-overlay .overlay-inner {
+  position: relative;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  margin-top: -50px;
+}
+
+.artist-link .image-container .artist-link-overlay .overlay-inner .overlay-btn {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  margin-left: -100px;
+  margin-top: -50px;
 }
 
 .artist-link .image-container:hover .artist-link-overlay {
@@ -209,9 +231,18 @@ body .row::after {
   filter: drop-shadow(1px 5px 5px rgba(72, 72, 72, 0.51));
 }
 
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+  font-smooth: always;
+}
+
 html,
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
   -webkit-appearance: none;
 }
 

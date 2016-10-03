@@ -9,11 +9,17 @@
 
 $top-min-height: 150px;
 
+*{
+  @include crossBrowser(box-sizing, border-box);
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004) !important;
+  font-smooth: always;
+}
+
 html,
 body{
-  font-family: $helvetica;
+  font-family: Helvetica, Arial, Verdana, sans-serif;;
   -webkit-appearance: none;
-  //@include pad-lat;
   @include bg-colors;
   @include txt-colors;
   @include grid;
