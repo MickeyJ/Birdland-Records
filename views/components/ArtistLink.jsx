@@ -5,7 +5,7 @@ import {BoxButton} from '../../build'
 const buttonWithIcon = (props) =>(
   <div>
     <span style={{position: 'relative', right: 10}}>VIEW ARTIST</span>
-    <img style={{position: 'absolute', display: 'inline', width: 24, height: 24, top: '50%', right: 20, marginTop: -12}} src="icons/arrow-right.png" alt="" />
+    <img style={{position: 'absolute', display: 'inline', width: 24, height: 24, top: '50%', right: 15, marginTop: -12}} src="icons/arrow-right.png" alt="" />
   </div>
 )
 
@@ -20,7 +20,7 @@ const ArtistLink = (props) => (
               <h3>{props.artist_name}</h3>
               <div className="overlay-btn">
                 <BoxButton
-                  style={{width: 200}}
+                  style={{width: 150, fontSize: 15}}
                   text={buttonWithIcon()}
                 />
 

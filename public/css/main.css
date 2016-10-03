@@ -188,10 +188,10 @@ body .row::after {
   position: absolute;
   top: 100%;
   left: 50%;
-  width: 200px;
+  width: 150px;
   height: 50px;
   line-height: 50px;
-  margin-left: -100px;
+  margin-left: -75px;
   margin-top: -50px;
 }
 
