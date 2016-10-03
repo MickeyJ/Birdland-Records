@@ -4,15 +4,17 @@ const SiteFooter = (props) => (
   <div id="site-footer" className="row">
 
     <div id="social-icons" className="col-3">
+
+      <a href="#!TW" >
+        <img src="icons/tw-shadow.png" style={{height: 52, width: 52, marginBottom: -3}}  alt="TW" />
+      </a>
       <a href="#FB" >
         <img src="icons/fb-shadow.png" alt="FB" />
       </a>
       <a href="#BL email" >
-        <img src="icons/mail.png" style={{height: 40, width: 40, marginBottom: 5}} alt="BL" />
+        <img src="icons/mail_2.png" style={{height: 45, width: 45, marginBottom: 2}} alt="BL" />
       </a>
-      <a href="#!TW" >
-        <img src="icons/tw-shadow.png"  alt="TW" />
-      </a>
+
     </div>
 
 
