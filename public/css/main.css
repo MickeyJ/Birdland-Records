@@ -399,6 +399,7 @@ body .row {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   width: 100%;
+  max-width: 2000px;
 }
 
 @media all and (max-width: 3000px) {
@@ -640,7 +641,7 @@ body .row2 {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  margin-top: 3%;
+  margin-top: 1%;
   width: 100%;
 }
 
@@ -933,7 +934,7 @@ body .shadow.hoverable:hover {
 
 #artist-thumb-container {
   width: 80%;
-  margin: 4% auto 0;
+  margin: 2vw auto 0;
   padding: 0;
 }
 

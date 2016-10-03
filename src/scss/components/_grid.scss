@@ -9,6 +9,7 @@
     @include crossBrowser(box-sizing, border-box);
     @extend %clearFix;
     width: 100%;
+    max-width: 2000px;
 
   }
 
@@ -37,7 +38,7 @@
   .row2{
     @include crossBrowser(box-sizing, border-box);
     @extend %clearFix;
-    margin-top: 3%;
+    margin-top: 1%;
     width: 100%;
 
     @for $i from 1 through $grid-count{
