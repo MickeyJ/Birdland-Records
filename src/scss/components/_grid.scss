@@ -13,21 +13,40 @@
 
   }
 
-  $map: ( 3000: 16, 1300:12, 750:6, 380:3 );
+  $map: ( 3000: 16, 1300:12, 800:6, 400:3 );
 
   @each $break, $count in $map{
     @media all and (max-width: $break + px){
       @for $i from 1 through $count{
+
         $equ: 92% / $i;
+
         .cell-#{$break}-#{$i}{
           .grid-box{
-            float: left;
             width: $equ;
             margin: 2.5% 4% / $i 1%;
           }
         }
+
       }
     }
+  }
+
+  .grid-box{
+    float: left;
+
+    @include laptop{
+      margin-top: 20px !important;
+    }
+
+    @include tablet{
+      margin-top: 30px !important;
+    }
+
+    @include phone{
+      margin-top: 30px !important;
+    }
+
   }
 
 }

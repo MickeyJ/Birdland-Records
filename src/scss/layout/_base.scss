@@ -1,5 +1,6 @@
 @import '../mixins/general';
 @import '../mixins/shadow';
+@import '../mixins/media';
 @import '../variables/font';
 @import '../components/grid';
 @import '../colors/bg-colors';
@@ -45,15 +46,27 @@ body{
 }
 
 #main-content{
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
   padding-bottom: $footer-height;
 }
 
 #artist-thumb-container{
-  width: 80%;
-  margin: 2vw auto 0;
+  width: 90%;
+  margin: 1vw auto 0;
   padding: 0;
+
+
+  @include laptop{
+    width: 75%;
+    margin-top: 0.2vw;
+  }
+
+  @include tablet{
+    width: 95%;
+  }
+
+
 }
 
 .artist-thumb{
@@ -72,6 +85,14 @@ body{
   line-height: $footer-height;
 
   #social-icons{
+    @include laptop{
+      width: 100% !important;
+      margin: 0 auto;
+    }
+
+    @include tablet{
+      width: 100% !important;
+    }
     margin-left: 34.5%;
     height: $footer-height;
     text-align: center;

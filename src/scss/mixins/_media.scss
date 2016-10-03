@@ -1,24 +1,24 @@
 
 @mixin phone{
-  @media only screen and (max-width: 480px){
+  @media only screen and (max-width: 400px){
     @content;
   }
 }
 
 @mixin tablet{
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 800px){
     @content;
   }
 }
 
 @mixin laptop{
-  @media only screen and (min-width: 1200px){
+  @media only screen and (max-width: 1600px){
     @content;
   }
 }
 
 @mixin desktop{
-  @media only screen and (min-width: 769px){
+  @media only screen and (max-width: 3000px){
     @content;
   }
 }

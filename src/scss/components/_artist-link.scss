@@ -1,6 +1,7 @@
 @import '../mixins/shadow';
 @import '../mixins/general';
 @import '../mixins/transition';
+@import '../mixins/media';
 
 .artist-link{
   @include crossBrowser(box-sizing, border-box);
@@ -19,6 +20,16 @@
     font-size: 14px;
     font-weight: 200;
     z-index: -1;
+
+    @include laptop{
+      font-size: 12px;
+      padding: 9px 0;
+    }
+
+    @include tablet{
+      font-size: 12px;
+    }
+
   }
 
   .image-container{

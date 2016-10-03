@@ -12,7 +12,7 @@ export default class Landing extends Component{
         title={this.props.title}
         description={this.props.description}>
 
-        <div id="artist-thumb-container" className="row cell-3000-3 cell-1300-2 cell-750-1 cell-380-1">
+        <div id="artist-thumb-container" className="row cell-3000-3 cell-1300-3 cell-800-2 cell-400-1">
 
             <ArtistLink
               id="britt-image"

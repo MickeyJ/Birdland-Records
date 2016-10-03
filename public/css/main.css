@@ -135,6 +135,19 @@ body .row2::after {
   z-index: -1;
 }
 
+@media only screen and (max-width: 1600px) {
+  .artist-link .artist-name {
+    font-size: 12px;
+    padding: 9px 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .artist-link .artist-name {
+    font-size: 12px;
+  }
+}
+
 .artist-link .image-container {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.12), 1px 2px 4px rgba(0, 0, 0, 0.24);
@@ -238,6 +251,13 @@ body .row2::after {
   width: 150px;
   height: 150px;
   cursor: pointer;
+  -webkit-transition: filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -o-transition: filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  transition: filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -webkit-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -moz-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  -o-transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
+  transition-timing-function: cubic-bezier(0.625, 0.38, 0.44, 0.86);
   -webkit-transition: -webkit-filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
   -o-transition: -webkit-filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
   transition: -webkit-filter 0.2s cubic-bezier(0.625, 0.38, 0.44, 0.86);
@@ -251,6 +271,14 @@ body .row2::after {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   -webkit-filter: drop-shadow(1px 5px 5px rgba(72, 72, 72, 0.62));
   filter: drop-shadow(1px 5px 5px rgba(72, 72, 72, 0.51));
+}
+
+@media only screen and (max-width: 1600px) {
+  #birdland-logo-container {
+    margin-left: -63px;
+    width: 126px;
+    height: 126px;
+  }
 }
 
 * {
@@ -405,97 +433,81 @@ body .row {
 @media all and (max-width: 3000px) {
   html .cell-3000-1 .grid-box,
   body .cell-3000-1 .grid-box {
-    float: left;
     width: 92%;
     margin: 2.5% 4% 1%;
   }
   html .cell-3000-2 .grid-box,
   body .cell-3000-2 .grid-box {
-    float: left;
     width: 46%;
     margin: 2.5% 2% 1%;
   }
   html .cell-3000-3 .grid-box,
   body .cell-3000-3 .grid-box {
-    float: left;
     width: 30.66667%;
     margin: 2.5% 1.33333% 1%;
   }
   html .cell-3000-4 .grid-box,
   body .cell-3000-4 .grid-box {
-    float: left;
     width: 23%;
     margin: 2.5% 1% 1%;
   }
   html .cell-3000-5 .grid-box,
   body .cell-3000-5 .grid-box {
-    float: left;
     width: 18.4%;
     margin: 2.5% 0.8% 1%;
   }
   html .cell-3000-6 .grid-box,
   body .cell-3000-6 .grid-box {
-    float: left;
     width: 15.33333%;
     margin: 2.5% 0.66667% 1%;
   }
   html .cell-3000-7 .grid-box,
   body .cell-3000-7 .grid-box {
-    float: left;
     width: 13.14286%;
     margin: 2.5% 0.57143% 1%;
   }
   html .cell-3000-8 .grid-box,
   body .cell-3000-8 .grid-box {
-    float: left;
     width: 11.5%;
     margin: 2.5% 0.5% 1%;
   }
   html .cell-3000-9 .grid-box,
   body .cell-3000-9 .grid-box {
-    float: left;
     width: 10.22222%;
     margin: 2.5% 0.44444% 1%;
   }
   html .cell-3000-10 .grid-box,
   body .cell-3000-10 .grid-box {
-    float: left;
     width: 9.2%;
     margin: 2.5% 0.4% 1%;
   }
   html .cell-3000-11 .grid-box,
   body .cell-3000-11 .grid-box {
-    float: left;
     width: 8.36364%;
     margin: 2.5% 0.36364% 1%;
   }
   html .cell-3000-12 .grid-box,
   body .cell-3000-12 .grid-box {
-    float: left;
     width: 7.66667%;
     margin: 2.5% 0.33333% 1%;
   }
   html .cell-3000-13 .grid-box,
   body .cell-3000-13 .grid-box {
-    float: left;
     width: 7.07692%;
     margin: 2.5% 0.30769% 1%;
   }
   html .cell-3000-14 .grid-box,
   body .cell-3000-14 .grid-box {
-    float: left;
     width: 6.57143%;
     margin: 2.5% 0.28571% 1%;
   }
   html .cell-3000-15 .grid-box,
   body .cell-3000-15 .grid-box {
-    float: left;
     width: 6.13333%;
     margin: 2.5% 0.26667% 1%;
   }
   html .cell-3000-16 .grid-box,
   body .cell-3000-16 .grid-box {
-    float: left;
     width: 5.75%;
     margin: 2.5% 0.25% 1%;
   }
@@ -504,135 +516,140 @@ body .row {
 @media all and (max-width: 1300px) {
   html .cell-1300-1 .grid-box,
   body .cell-1300-1 .grid-box {
-    float: left;
     width: 92%;
     margin: 2.5% 4% 1%;
   }
   html .cell-1300-2 .grid-box,
   body .cell-1300-2 .grid-box {
-    float: left;
     width: 46%;
     margin: 2.5% 2% 1%;
   }
   html .cell-1300-3 .grid-box,
   body .cell-1300-3 .grid-box {
-    float: left;
     width: 30.66667%;
     margin: 2.5% 1.33333% 1%;
   }
   html .cell-1300-4 .grid-box,
   body .cell-1300-4 .grid-box {
-    float: left;
     width: 23%;
     margin: 2.5% 1% 1%;
   }
   html .cell-1300-5 .grid-box,
   body .cell-1300-5 .grid-box {
-    float: left;
     width: 18.4%;
     margin: 2.5% 0.8% 1%;
   }
   html .cell-1300-6 .grid-box,
   body .cell-1300-6 .grid-box {
-    float: left;
     width: 15.33333%;
     margin: 2.5% 0.66667% 1%;
   }
   html .cell-1300-7 .grid-box,
   body .cell-1300-7 .grid-box {
-    float: left;
     width: 13.14286%;
     margin: 2.5% 0.57143% 1%;
   }
   html .cell-1300-8 .grid-box,
   body .cell-1300-8 .grid-box {
-    float: left;
     width: 11.5%;
     margin: 2.5% 0.5% 1%;
   }
   html .cell-1300-9 .grid-box,
   body .cell-1300-9 .grid-box {
-    float: left;
     width: 10.22222%;
     margin: 2.5% 0.44444% 1%;
   }
   html .cell-1300-10 .grid-box,
   body .cell-1300-10 .grid-box {
-    float: left;
     width: 9.2%;
     margin: 2.5% 0.4% 1%;
   }
   html .cell-1300-11 .grid-box,
   body .cell-1300-11 .grid-box {
-    float: left;
     width: 8.36364%;
     margin: 2.5% 0.36364% 1%;
   }
   html .cell-1300-12 .grid-box,
   body .cell-1300-12 .grid-box {
-    float: left;
     width: 7.66667%;
     margin: 2.5% 0.33333% 1%;
   }
 }
 
-@media all and (max-width: 750px) {
-  html .cell-750-1 .grid-box,
-  body .cell-750-1 .grid-box {
-    float: left;
+@media all and (max-width: 800px) {
+  html .cell-800-1 .grid-box,
+  body .cell-800-1 .grid-box {
     width: 92%;
     margin: 2.5% 4% 1%;
   }
-  html .cell-750-2 .grid-box,
-  body .cell-750-2 .grid-box {
-    float: left;
+  html .cell-800-2 .grid-box,
+  body .cell-800-2 .grid-box {
     width: 46%;
     margin: 2.5% 2% 1%;
   }
-  html .cell-750-3 .grid-box,
-  body .cell-750-3 .grid-box {
-    float: left;
+  html .cell-800-3 .grid-box,
+  body .cell-800-3 .grid-box {
     width: 30.66667%;
     margin: 2.5% 1.33333% 1%;
   }
-  html .cell-750-4 .grid-box,
-  body .cell-750-4 .grid-box {
-    float: left;
+  html .cell-800-4 .grid-box,
+  body .cell-800-4 .grid-box {
     width: 23%;
     margin: 2.5% 1% 1%;
   }
-  html .cell-750-5 .grid-box,
-  body .cell-750-5 .grid-box {
-    float: left;
+  html .cell-800-5 .grid-box,
+  body .cell-800-5 .grid-box {
     width: 18.4%;
     margin: 2.5% 0.8% 1%;
   }
-  html .cell-750-6 .grid-box,
-  body .cell-750-6 .grid-box {
-    float: left;
+  html .cell-800-6 .grid-box,
+  body .cell-800-6 .grid-box {
     width: 15.33333%;
     margin: 2.5% 0.66667% 1%;
   }
 }
 
-@media all and (max-width: 380px) {
-  html .cell-380-1 .grid-box,
-  body .cell-380-1 .grid-box {
-    float: left;
+@media all and (max-width: 400px) {
+  html .cell-400-1 .grid-box,
+  body .cell-400-1 .grid-box {
     width: 92%;
     margin: 2.5% 4% 1%;
   }
-  html .cell-380-2 .grid-box,
-  body .cell-380-2 .grid-box {
-    float: left;
+  html .cell-400-2 .grid-box,
+  body .cell-400-2 .grid-box {
     width: 46%;
     margin: 2.5% 2% 1%;
   }
-  html .cell-380-3 .grid-box,
-  body .cell-380-3 .grid-box {
-    float: left;
+  html .cell-400-3 .grid-box,
+  body .cell-400-3 .grid-box {
     width: 30.66667%;
     margin: 2.5% 1.33333% 1%;
+  }
+}
+
+html .grid-box,
+body .grid-box {
+  float: left;
+}
+
+@media only screen and (max-width: 1600px) {
+  html .grid-box,
+  body .grid-box {
+    margin-top: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html .grid-box,
+  body .grid-box {
+    margin-top: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html .grid-box,
+  body .grid-box {
+    margin-top: 30px !important;
   }
 }
 
@@ -927,15 +944,28 @@ body .shadow.hoverable:hover {
 }
 
 #main-content {
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
   padding-bottom: 50px;
 }
 
 #artist-thumb-container {
-  width: 80%;
-  margin: 2vw auto 0;
+  width: 90%;
+  margin: 1vw auto 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 1600px) {
+  #artist-thumb-container {
+    width: 75%;
+    margin-top: 0.2vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #artist-thumb-container {
+    width: 95%;
+  }
 }
 
 .artist-thumb img {
@@ -956,6 +986,19 @@ body .shadow.hoverable:hover {
   margin-left: 34.5%;
   height: 50px;
   text-align: center;
+}
+
+@media only screen and (max-width: 1600px) {
+  #site-footer #social-icons {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #site-footer #social-icons {
+    width: 100% !important;
+  }
 }
 
 #site-footer #social-icons img {
