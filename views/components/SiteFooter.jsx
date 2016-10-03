@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SiteFooter = (props) => (
-  <div id="site-footer" className="row">
+  <div id="site-footer" className="row2">
 
     <div id="social-icons" className="col-3">
 
@@ -16,7 +16,6 @@ const SiteFooter = (props) => (
       </a>
 
     </div>
-
 
   </div>
 );

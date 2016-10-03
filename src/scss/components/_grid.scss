@@ -3,11 +3,41 @@
 @import '../mixins/media';
 @import '../variables/general';
 
+
 @mixin grid{
   .row{
     @include crossBrowser(box-sizing, border-box);
     @extend %clearFix;
-    margin-top: 2%;
+    width: 100%;
+
+  }
+
+  $map: ( 3000: 16, 1300:12, 750:6, 380:3 );
+
+  @each $break, $count in $map{
+    @media all and (max-width: $break + px){
+      @for $i from 1 through $count{
+        $equ: 92% / $i;
+        .cell-#{$break}-#{$i}{
+          .grid-box{
+            float: left;
+            width: $equ;
+            margin: 2.5% 4% / $i 1%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+@mixin grid2{
+  .row2{
+    @include crossBrowser(box-sizing, border-box);
+    @extend %clearFix;
+    margin-top: 3%;
     width: 100%;
 
     @for $i from 1 through $grid-count{
@@ -23,13 +53,6 @@
           margin-right: $column-margin / 2;
         }
 
-        @include tablet{
-          width: 100%;
-          padding: 5% 0 1% 0;
-          margin: 0;
-          &:first-child{  margin-left: 0;  }
-          &:last-child{   margin-right: 0;  }
-        }
       }
     }
 

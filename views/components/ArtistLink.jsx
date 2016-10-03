@@ -10,7 +10,7 @@ const buttonWithIcon = (props) =>(
 )
 
 const ArtistLink = (props) => (
-  <div className="artist-link col-3">
+  <div className="artist-link col-3 grid-box">
       <div id={props.id} className="image-container hoverable">
         <a href={props.pathname}>
           <div className="artist-link-overlay">

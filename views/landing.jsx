@@ -12,9 +12,7 @@ export default class Landing extends Component{
         title={this.props.title}
         description={this.props.description}>
 
-        <div id="artist-thumb-container">
-
-          <div className="row">
+        <div id="artist-thumb-container" className="row cell-3000-3 cell-1300-2 cell-750-1 cell-380-1">
 
             <ArtistLink
               id="britt-image"
@@ -37,10 +35,6 @@ export default class Landing extends Component{
               artist_name="ELISE LEGENDRE"
             />
 
-          </div>
-
-          <div className="row">
-
             <ArtistLink
               id="-image"
               pathname={`/${artist_data[3].path}`}
@@ -61,8 +55,6 @@ export default class Landing extends Component{
               image_url="images/artists/FAIRYLIGHTS_2.jpg"
               artist_name="THE FAIRYLIGHTS"
             />
-
-          </div>
 
         </div>
         <script src="preloader.js"></script>

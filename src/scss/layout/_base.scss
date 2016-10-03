@@ -23,6 +23,7 @@ body{
   @include bg-colors;
   @include txt-colors;
   @include grid;
+  @include grid2;
 
   .shadow{
     @include box-shadow;
@@ -51,7 +52,7 @@ body{
 
 #artist-thumb-container{
   width: 80%;
-  margin: 0 auto;
+  margin: 4% auto 0;
   padding: 0;
 }
 
@@ -62,9 +63,10 @@ body{
 }
 
 #site-footer{
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
+  padding-top: 4%;
   width: 100%;
   height: $footer-height;
   line-height: $footer-height;
