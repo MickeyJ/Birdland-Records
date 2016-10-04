@@ -201,7 +201,7 @@ body .row2::after {
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgba(255, 255, 255, 0.56);
+  background: rgba(0, 0, 0, 0.56);
   z-index: 100;
 }
 
@@ -212,6 +212,7 @@ body .row2::after {
   width: 100%;
   height: 100px;
   margin-top: -50px;
+  color: white;
 }
 
 .artist-link .image-container .artist-link-overlay .overlay-inner .overlay-btn {
