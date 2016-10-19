@@ -37,11 +37,9 @@ fairylights.alt = 'THE FAIRYLIGHTS';
 
 document.addEventListener('DOMContentLoaded', function(){
 
-  DOMReadyTime = Date.now()-timerStartLoad;
+  DOMReadyTime = Date.now() - timerStartLoad;
 
-  console.log("DOM Ready Time: ", Date.now()-timerStartLoad);
-
-
+  console.log("DOM Ready Time: ", Date.now() - timerStartLoad);
 
 });
 
