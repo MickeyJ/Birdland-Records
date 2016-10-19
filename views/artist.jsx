@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import DefaultLayout from './layout'
 
+import {Banner} from '../build'
+
 export default class Artist extends Component{
   render() {
     const {artist} = this.props;
@@ -10,6 +12,7 @@ export default class Artist extends Component{
         description={this.props.description}>
 
         <section id="artist-page-container">
+
           <div id="artist-page-banner">
 
             <div id="artist-image-container">
@@ -25,17 +28,17 @@ export default class Artist extends Component{
 
               <div className="artist-links">
                 <a className="artist-official-link" href={`#${artist.name}`}>
-                  Official Site
+                  OFFICIAL SITE
                 </a>
                 <div className="artist-social-links">
                   <a href="#!TW" >
-                    <img src="icons/tw-shadow.png" style={{height: 52, width: 52, marginBottom: -4}}  alt="TW" />
+                    <img src="icons/tw-shadow.png" style={{height: 42, width: 42, marginTop: 8}}  alt="TW" />
                   </a>
                   <a href="#FB" >
-                    <img src="icons/fb-shadow.png" style={{height: 50, width: 50, marginBottom: 0}} alt="FB" />
+                    <img src="icons/fb-shadow.png" style={{height: 38, width: 38, marginBottom: 2}} alt="FB" />
                   </a>
                   <a href="#BL email" >
-                    <img src="icons/mail_2.png" style={{height: 45, width: 45, marginBottom: 2}} alt="BL" />
+                    <img src="icons/mail_2.png" style={{height: 40, width: 40, marginBottom: 2}} alt="BL" />
                   </a>
                 </div>
               </div>
@@ -43,6 +46,30 @@ export default class Artist extends Component{
             </div>
 
           </div>
+
+          <section id="artist-info-container">
+
+            <Banner className="bg-white" style={{margin: '0'}} shadow={true}>
+              <h1 className="info-title">RELEASES</h1>
+              <div className="title-underline"></div>
+            </Banner>
+
+            <Banner className="bg-grey light" style={{margin: '0'}} shadow={true}>
+              <h1 className="info-title">VIDEOS</h1>
+              <div className="title-underline"></div>
+            </Banner>
+
+            <Banner className="bg-white" style={{margin: '0'}} shadow={true}>
+              <h1 className="info-title">EVENTS</h1>
+              <div className="title-underline"></div>
+            </Banner>
+
+            <Banner className="bg-grey light" style={{margin: '0'}} shadow={true}>
+              <h1 className="info-title">BREAKING NEWS</h1>
+              <div className="title-underline"></div>
+            </Banner>
+
+          </section>
 
         </section>
 
