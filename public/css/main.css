@@ -299,6 +299,7 @@ body .row2::after {
   background: rgba(255, 255, 255, 0.81);
   text-align: center;
   font-size: 1.4rem;
+  font-weight: 600;
 }
 
 #artist-page-banner #artist-links-container {

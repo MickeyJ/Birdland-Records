@@ -9,13 +9,18 @@ const Videos = (props) => {
       <h1 className="info-title">VIDEOS</h1>
       <div className="title-underline"></div>
 
-      <div id="artist-videos">
 
-        {props.videos.map((x,i) =>(
-          <iframe className="video" width="420" height="240" src={x} frameBorder="0"></iframe>
-        ))}
+        {props.videos.length
+          ?(
+            <div id="artist-videos">
+              {props.videos.map((x,i) =>(
+                <iframe key={i} className="video" width="420" height="240" src={x} frameBorder="0"></iframe>
+              ))}
+            </div>
+          )
+          : <h4 className="coming-soon">Coming Soon!</h4>
+        }
 
-      </div>
 
     </Banner>
   )
