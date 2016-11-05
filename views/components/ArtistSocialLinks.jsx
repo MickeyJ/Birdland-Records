@@ -8,7 +8,7 @@ const ArtistSocialLinks = (props) => {
     <div id="artist-links-container">
 
       <div className="artist-links">
-        <a className="artist-official-link hoverable" href={`#${artist.name}`}>
+        <a className="artist-official-link hoverable" href={links.website} target="_blank">
           OFFICIAL SITE
         </a>
         <div className="artist-social-links">

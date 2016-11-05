@@ -12,7 +12,10 @@ router.get('/', (req, res, next) =>{
 
 artist_data.forEach(artist =>{
   router.get(`/${artist.path}`, (req, res, next) =>{
-    res.render('artist', {artist})
+    res.render('artist', {
+      title: artist.name,
+      artist
+    })
   })
 });
 
