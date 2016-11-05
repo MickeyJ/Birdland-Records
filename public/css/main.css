@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
 html .row::after,
 body .row::after, html .row2::after,
 body .row2::after {
@@ -290,7 +291,7 @@ body .row2::after {
 #artist-page-banner #artist-image-container .artist-name-overlay {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 200px;
   min-width: 200px;
   height: 55px;
   line-height: 55px;
@@ -309,7 +310,7 @@ body .row2::after {
   display: flex;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 200px;
 }
 
 #artist-page-banner #artist-links-container .artist-links .artist-official-link {
@@ -336,6 +337,7 @@ body .row2::after {
   padding: 0 10px 0 10px;
   text-align: center;
   background: white;
+  z-index: 10;
 }
 
 #artist-page-banner #artist-links-container .artist-links .artist-official-link.hoverable:hover {
@@ -387,6 +389,74 @@ body .row2::after {
 .title-underline {
   width: 60px;
   border-bottom: 4px solid grey;
+}
+
+.coming-soon {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+.artist-info-item-container {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.artist-info-item-container #artist-releases-slider {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide .release-image {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide .release-image img {
+  height: 400px;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide .release-info {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 15px;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide .release-info .release-info-header {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide .release-info .release-info-header .date {
+  font-weight: 100;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide .release-info .release-info-header .title {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 40px;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide .release-info .release-links .link-btn {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.artist-info-item-container #artist-videos {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.artist-info-item-container #artist-videos .video {
+  margin-right: 15px;
 }
 
 html .row::after,

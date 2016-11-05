@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import DefaultLayout from './layout'
 
 import {Banner} from '../build'
+import ArtistBannerImage from './components/ArtistBannerImage'
+import ArtistSocialLinks from './components/ArtistSocialLinks'
+import Releases from './components/artist_info/Releases'
+import Videos from './components/artist_info/Videos'
+import Events from './components/artist_info/Events'
+import BreakingNews from './components/artist_info/BreakingNews'
 
 export default class Artist extends Component{
   render() {
@@ -15,59 +21,21 @@ export default class Artist extends Component{
 
           <div id="artist-page-banner">
 
-            <div id="artist-image-container">
+            <ArtistBannerImage artist={artist} />
 
-              <img className="artist-page-image" src={artist.img_url} alt={artist.name} />
-              <div className="artist-name-overlay">
-                <span>{artist.name}</span>
-              </div>
-
-            </div>
-
-            <div id="artist-links-container">
-
-              <div className="artist-links">
-                <a className="artist-official-link" href={`#${artist.name}`}>
-                  OFFICIAL SITE
-                </a>
-                <div className="artist-social-links">
-                  <a href="#!TW" >
-                    <img src="icons/tw-shadow.png" style={{height: 42, width: 42, marginTop: 8}}  alt="TW" />
-                  </a>
-                  <a href="#FB" >
-                    <img src="icons/fb-shadow.png" style={{height: 38, width: 38, marginBottom: 2}} alt="FB" />
-                  </a>
-                  <a href="#BL email" >
-                    <img src="icons/mail_2.png" style={{height: 40, width: 40, marginBottom: 2}} alt="BL" />
-                  </a>
-                </div>
-              </div>
-
-            </div>
+            <ArtistSocialLinks artist={artist} />
 
           </div>
 
           <section id="artist-info-container">
 
-            <Banner className="bg-white" style={{margin: '0'}} shadow={true}>
-              <h1 className="info-title">RELEASES</h1>
-              <div className="title-underline"></div>
-            </Banner>
+            <Releases releases={artist.info.releases}/>
 
-            <Banner className="bg-grey light" style={{margin: '0'}} shadow={true}>
-              <h1 className="info-title">VIDEOS</h1>
-              <div className="title-underline"></div>
-            </Banner>
+            <Videos videos={artist.videos}/>
 
-            <Banner className="bg-white" style={{margin: '0'}} shadow={true}>
-              <h1 className="info-title">EVENTS</h1>
-              <div className="title-underline"></div>
-            </Banner>
+            <Events />
 
-            <Banner className="bg-grey light" style={{margin: '0'}} shadow={true}>
-              <h1 className="info-title">BREAKING NEWS</h1>
-              <div className="title-underline"></div>
-            </Banner>
+            <BreakingNews />
 
           </section>
 

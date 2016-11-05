@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const artist_data = require('./artist_data');
 
-
 router.get('/', (req, res, next) =>{
   res.render('landing', {
     title: 'Artists',
