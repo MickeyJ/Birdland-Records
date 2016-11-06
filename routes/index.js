@@ -11,6 +11,7 @@ router.get('/', (req, res, next) =>{
   })
 });
 
+
 artist_data.forEach(artist =>{
   router.get(`/${artist.path}`, (req, res, next) =>{
     res.render('artist', {
@@ -22,6 +23,12 @@ artist_data.forEach(artist =>{
 
 router.get('/artist_data', (req, res, next) =>{
   res.send(artist_data)
+});
+
+router.get('/db_data', (req, res, next) =>{
+  db.SelectAllArtist().then(data =>{
+    res.status(200).send(data)
+  });
 });
 
 module.exports = router;
