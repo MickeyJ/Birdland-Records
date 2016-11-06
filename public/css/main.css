@@ -458,6 +458,8 @@ body .row2::after {
 
 .artist-info-item-container #artist-videos .video {
   margin-right: 15px;
+  width: 18vw;
+  height: 275px;
 }
 
 html .row::after,
