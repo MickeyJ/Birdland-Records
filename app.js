@@ -5,6 +5,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const routes = require('./routes/index');
+const api = require('./routes/api');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', routes);
+app.use('/api', api);
 
 app.use( (req, res, next) =>{
   const err = new Error('Not Found');

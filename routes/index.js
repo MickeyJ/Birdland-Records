@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const artist_data = require('../artist_data');
 const db = require('../db');
+const url = require('url');
+
+
+
 
 router.get('/', (req, res, next) =>{
   res.render('landing', {
@@ -10,7 +14,6 @@ router.get('/', (req, res, next) =>{
     artist_data
   })
 });
-
 
 artist_data.forEach(artist =>{
   router.get(`/${artist.path}`, (req, res, next) =>{
@@ -21,14 +24,9 @@ artist_data.forEach(artist =>{
   })
 });
 
-router.get('/artist_data', (req, res, next) =>{
-  res.send(artist_data)
-});
 
-router.get('/db_data', (req, res, next) =>{
-  db.SelectAllArtist().then(data =>{
-    res.status(200).send(data)
-  });
-});
+
+
+
 
 module.exports = router;
