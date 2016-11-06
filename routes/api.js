@@ -14,12 +14,12 @@ router.get('/', (req, res, next) => {
   res.send({
     all_artist_data: url.resolve(baseUrl, '/api/all_artist_data'),
     artists:{
-      britt_margit: url.resolve(baseUrl, '/api/britt_margit'),
-      robyn_sherwell: url.resolve(baseUrl, '/api/robyn_sherwell'),
-      elise_legendre: url.resolve(baseUrl, '/api/elise_legendre'),
-      cages_of_light: url.resolve(baseUrl, '/api/cages_of_light'),
-      dogwood_heart: url.resolve(baseUrl, '/api/dogwood_heart'),
-      the_fairylights: url.resolve(baseUrl, '/api/the_fairylights')
+      Britt_Margit: url.resolve(baseUrl, '/api/britt_margit'),
+      Robyn_Sherwell: url.resolve(baseUrl, '/api/robyn_sherwell'),
+      Elise_Legendre: url.resolve(baseUrl, '/api/elise_legendre'),
+      Cages_Of_Light: url.resolve(baseUrl, '/api/cages_of_light'),
+      Dogwood_Deart: url.resolve(baseUrl, '/api/dogwood_heart'),
+      The_Fairylights: url.resolve(baseUrl, '/api/the_fairylights')
     }
   })
 });
@@ -39,7 +39,7 @@ db.SelectArtistAll().then(artists => {
 
           const artist = artists[i];
 
-          artist.social_links = social.find(link => artist.id === link.artist_id) || {};
+          artist.social_links = social.find(link => artist.id === link.artist_id) || null;
 
           artist.videos = videos.filter(vid => artist.id === vid.artist_id).map(vid => vid.url);
 
