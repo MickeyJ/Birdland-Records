@@ -30,7 +30,6 @@ db.SelectArtistAll().then(artists => {
       db.SelectReleaseAll().then(releases => {
 
         const artistCount  = artists.length;
-
         let count = 0;
 
         for (var i = 0; i < artists.length; i++) {
@@ -51,23 +50,21 @@ db.SelectArtistAll().then(artists => {
           count++
         }
 
-        if(count === artistCount){
+        router.get(`/artist_data`, (req, res, next) =>{
 
-          router.get(`/artist_data`, (req, res, next) =>{
+          res.status(200).send(artists)
 
-            res.status(200).send(artists)
+        });
+
+        artists.forEach((x, i) => {
+          router.get(`/artist_${i+1}`, (req, res, next) =>{
+
+            res.status(200).send(x)
 
           });
+        })
 
-          artists.forEach((x, i) => {
-            router.get(`/artist_${i+1}`, (req, res, next) =>{
 
-              res.status(200).send(x)
-
-            });
-          })
-
-        }
 
       });
     });
