@@ -12,13 +12,15 @@ const baseUrl = (
 
 router.get('/', (req, res, next) => {
   res.send({
-    artists_all: url.resolve(baseUrl, '/api/artist_data'),
-    artist_1: url.resolve(baseUrl, '/api/artist_1'),
-    artist_2: url.resolve(baseUrl, '/api/artist_2'),
-    artist_3: url.resolve(baseUrl, '/api/artist_3'),
-    artist_4: url.resolve(baseUrl, '/api/artist_4'),
-    artist_5: url.resolve(baseUrl, '/api/artist_5'),
-    artist_6: url.resolve(baseUrl, '/api/artist_6')
+    all_artist_data: url.resolve(baseUrl, '/api/all_artist_data'),
+    artists:{
+      britt_margit: url.resolve(baseUrl, '/api/britt_margit'),
+      robyn_sherwell: url.resolve(baseUrl, '/api/robyn_sherwell'),
+      elise_legendre: url.resolve(baseUrl, '/api/elise_legendre'),
+      cages_of_light: url.resolve(baseUrl, '/api/cages_of_light'),
+      dogwood_heart: url.resolve(baseUrl, '/api/dogwood_heart'),
+      the_fairylights: url.resolve(baseUrl, '/api/the_fairylights')
+    }
   })
 });
 
@@ -53,14 +55,14 @@ db.SelectArtistAll().then(artists => {
 
         if(count === artistCount){
 
-          router.get(`/artist_data`, (req, res, next) =>{
+          router.get(`/all_artist_data`, (req, res, next) =>{
 
             res.status(200).send(artists)
 
           });
 
           artists.forEach((x, i) => {
-            router.get(`/artist_${i+1}`, (req, res, next) =>{
+            router.get(`/${x.path}`, (req, res, next) =>{
 
               res.status(200).send(x)
 
