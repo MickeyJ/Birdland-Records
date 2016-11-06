@@ -4,7 +4,7 @@ const db = require('../db');
 const url = require('url');
 
 const baseUrl = (
-  process.env.NODE_ENV='development'
+  process.env.NODE_ENV==='development'
     ? 'http://localhost:3000'
     : 'https://birdland-demo.herokuapp.com'
 );
