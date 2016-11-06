@@ -9,7 +9,7 @@ const baseUrl = (
     : 'https://birdland-demo.herokuapp.com'
 );
 
-router.get('/', (req, res, next) =>{
+router.get('/', (req, res, next) => {
   res.send({
     artists_all: url.resolve(baseUrl, '/api/artist_data'),
     artist_1: url.resolve(baseUrl, '/api/artist_1'),
@@ -29,6 +29,10 @@ db.SelectArtistAll().then(artists => {
 
       db.SelectReleaseAll().then(releases => {
 
+        const artistCount  = artists.length;
+
+        let count = 0;
+
         for (var i = 0; i < artists.length; i++) {
 
           const artist = artists[i];
@@ -42,23 +46,28 @@ db.SelectArtistAll().then(artists => {
             return release
           });
 
-          if(artist.social_links) delete artist.social_links.artist_id
+          if(artist.social_links) delete artist.social_links.artist_id;
 
+          count++
         }
 
-        router.get(`/artist_data`, (req, res, next) =>{
+        if(count === artistCount){
 
-          res.status(200).send(artists)
+          router.get(`/artist_data`, (req, res, next) =>{
 
-        });
-
-        artists.forEach((x, i) => {
-          router.get(`/artist_${i+1}`, (req, res, next) =>{
-
-            res.status(200).send(x)
+            res.status(200).send(artists)
 
           });
-        })
+
+          artists.forEach((x, i) => {
+            router.get(`/artist_${i+1}`, (req, res, next) =>{
+
+              res.status(200).send(x)
+
+            });
+          })
+
+        }
 
       });
     });
