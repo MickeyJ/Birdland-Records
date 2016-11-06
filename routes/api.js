@@ -3,7 +3,11 @@ const router = express.Router();
 const db = require('../db');
 const url = require('url');
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = (
+  process.env.NODE_ENV='development'
+    ? 'http://localhost:3000'
+    : 'https://birdland-demo.herokuapp.com'
+);
 
 router.get('/', (req, res, next) =>{
   res.send({
