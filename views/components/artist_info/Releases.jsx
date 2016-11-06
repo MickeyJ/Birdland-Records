@@ -3,13 +3,15 @@ import React from 'react'
 import { Banner, BoxButton } from '../../../build'
 
 const Releases = (props) => {
-    const {releases} = props;
+
+  const {releases} = props;
+
   return (
     <Banner className="artist-info-item-container bg-grey light" style={{margin: '0', minHeight: 200}} shadow={true}>
       <h1 className="info-title">RELEASES</h1>
       <div className="title-underline"></div>
 
-        {releases
+        {releases.length
           ?(
             <div id="artist-releases-slider">
               {releases.map((x, i) =>(
@@ -17,7 +19,7 @@ const Releases = (props) => {
 
                   <div className="release-image">
 
-                    <img src={x.img_url} alt="123" />
+                    <img src={x.image} alt="123" />
 
                   </div>
 

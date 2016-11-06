@@ -6,9 +6,9 @@ const ArtistBannerImage = (props) => {
   return (
     <div id="artist-image-container">
 
-      <img className="artist-page-image" src={artist.img_url} alt={artist.name} />
+      <img className="artist-page-image" src={artist.image} alt={artist.name} />
       <div className="artist-name-overlay">
-        <span>{artist.name}</span>
+        <span>{artist.name.toUpperCase()}</span>
       </div>
 
     </div>

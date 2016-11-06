@@ -29,7 +29,7 @@ export default class Artist extends Component{
 
           <section id="artist-info-container">
 
-            <Releases releases={artist.info.releases}/>
+            <Releases releases={artist.releases}/>
 
             <Videos videos={artist.videos}/>
 
