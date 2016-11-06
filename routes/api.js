@@ -39,7 +39,7 @@ db.SelectArtistAll().then(artists => {
 
           const artist = artists[i];
 
-          artist.social_links = social.find(link => artist.id === link.artist_id);
+          artist.social_links = social.find(link => artist.id === link.artist_id) || {};
 
           artist.videos = videos.filter(vid => artist.id === vid.artist_id).map(vid => vid.url);
 
