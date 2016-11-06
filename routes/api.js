@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
@@ -50,21 +51,23 @@ db.SelectArtistAll().then(artists => {
           count++
         }
 
-        router.get(`/artist_data`, (req, res, next) =>{
+        if(count === artistCount){
 
-          res.status(200).send(artists)
+          router.get(`/artist_data`, (req, res, next) =>{
 
-        });
-
-        artists.forEach((x, i) => {
-          router.get(`/artist_${i+1}`, (req, res, next) =>{
-
-            res.status(200).send(x)
+            res.status(200).send(artists)
 
           });
-        })
 
+          artists.forEach((x, i) => {
+            router.get(`/artist_${i+1}`, (req, res, next) =>{
 
+              res.status(200).send(x)
+
+            });
+          })
+
+        }
 
       });
     });
