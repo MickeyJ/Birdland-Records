@@ -8,7 +8,7 @@ const BreakingNews = (props) => {
 
   return (
     <Banner className="artist-info-item-container bg-white" style={{margin: '0', minHeight: 200}} shadow={true}>
-      <h1 className="info-title">BREAKING NEWS</h1>
+      <h1 className="info-title">LATEST NEWS</h1>
       <div className="title-underline"></div>
 
       {news.length
