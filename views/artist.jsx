@@ -12,6 +12,7 @@ import BreakingNews from './components/artist_info/BreakingNews'
 export default class Artist extends Component{
   render() {
     const {artist} = this.props;
+
     return(
       <DefaultLayout
         title={this.props.title}
@@ -35,7 +36,7 @@ export default class Artist extends Component{
 
             <Events />
 
-            <BreakingNews />
+            <BreakingNews news={artist.news} />
 
           </section>
 

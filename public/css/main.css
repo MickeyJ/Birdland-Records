@@ -462,6 +462,34 @@ body .row2::after {
   height: 275px;
 }
 
+.artist-info-item-container #artist-news {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.artist-info-item-container #artist-news .news_item {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  width: 19vw;
+  height: 100%;
+}
+
+.artist-info-item-container #artist-news .news_item .title {
+  font-size: 15px;
+}
+
+.artist-info-item-container #artist-news .news_item img {
+  height: 225px;
+  display: inline-block;
+}
+
+.artist-info-item-container #artist-news .news_item .text {
+  font-size: 14px;
+}
+
 html .row::after,
 body .row::after, html .row2::after,
 body .row2::after {

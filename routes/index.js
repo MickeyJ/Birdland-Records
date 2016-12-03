@@ -1,8 +1,9 @@
 'use strict';
 const express = require('express');
-const router = express.Router();
 const artist_data = require('../artist_data');
 const db = require('../db');
+
+const router = express.Router();
 
 router.get('/', (req, res, next) =>{
   res.render('landing', {
@@ -20,67 +21,70 @@ db.SelectArtistAll().then(artists => {
 
       db.SelectReleaseAll().then(releases => {
 
-        const artistCount  = artists.length;
-        let count = 0;
+        db.SelectNewsAll().then(newsItems => {
 
-        for (var i = 0; i < artists.length; i++) {
+          let count = 0;
+          const artistCount  = artists.length;
 
-          const artist = artists[i];
+          for (var i = 0; i < artists.length; i++) {
 
-          artist.social_links = social.find(link => artist.id === link.artist_id) || {};
+            const artist = artists[i];
 
-          artist.videos = videos.filter(vid => artist.id === vid.artist_id).map(vid => vid.url);
+            artist.social_links = social.find(link => artist.id === link.artist_id) || {};
 
-          artist.releases = releases.filter(release => artist.id === release.artist_id).map(release => {
-            delete release.artist_id;
-            return release
-          });
+            artist.videos = videos.filter(vid => artist.id === vid.artist_id).map(vid => vid.url);
 
-          if(artist.social_links) delete artist.social_links.artist_id;
-
-          count++
-        }
-
-        if(count === artistCount){
-
-          router.get(`/api/all_artist_data`, (req, res, next) =>{
-
-            res.status(200).send(artists)
-
-          });
-
-
-          artists.forEach(artist =>{
-
-            router.get(`/${artist.path}`, (req, res, next) =>{
-              res.render('artist', {
-                title: artist.name,
-                artist
-              })
+            artist.releases = releases.filter(release => artist.id === release.artist_id).map(release => {
+              delete release.artist_id;
+              return release
             });
 
+            artist.news = newsItems.filter(item =>
+              artist.id === item.artist_id
+            ).map(item => ({
+              title: item.title,
+              image: item.image,
+              text: item.text
+            }));
 
-            router.get(`/api/${artist.path}`, (req, res, next) =>{
+            if(artist.social_links) delete artist.social_links.artist_id;
 
-              res.status(200).send(artist)
+            count++
+          }
+
+          if(count === artistCount){
+
+            router.get(`/api/all_artist_data`, (req, res, next) =>{
+
+              res.status(200).send(artists)
 
             });
 
-          });
+            artists.forEach(artist =>{
 
-        }
+              router.get(`/${artist.path}`, (req, res, next) =>{
+                res.render('artist', {
+                  title: artist.name,
+                  artist
+                })
+              });
 
+              router.get(`/api/${artist.path}`, (req, res, next) =>{
+
+                res.status(200).send(artist)
+
+              });
+
+            });
+
+          }
+
+        });
       });
     });
 
   });
 
 });
-
-
-
-
-
-
 
 module.exports = router;

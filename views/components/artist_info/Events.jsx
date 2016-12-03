@@ -9,6 +9,8 @@ const Events = (props) => {
       <h1 className="info-title">EVENTS</h1>
       <div className="title-underline"></div>
 
+      <h4 className="coming-soon">Coming Soon!</h4>
+
     </Banner>
   )
 };

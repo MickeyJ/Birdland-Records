@@ -22,35 +22,35 @@ export default class Landing extends Component{
             />
 
             <ArtistLink
-              id="-image"
+              id="robyn-image"
               pathname={`/${artist_data[1].path}`}
               image_url="images/artists/ROBYN_1.jpg"
               artist_name="ROBYN SHERWELL"
             />
 
             <ArtistLink
-              id="-image"
+              id="elise-image"
               pathname={`/${artist_data[2].path}`}
               image_url="images/artists/ELISE_2.jpg"
               artist_name="ELISE LEGENDRE"
             />
 
             <ArtistLink
-              id="-image"
+              id="cages-image"
               pathname={`/${artist_data[3].path}`}
               image_url="images/artists/CAGES_1.jpg"
               artist_name="CAGES OF LIGHT"
             />
 
             <ArtistLink
-              id="-image"
+              id="dogwood-image"
               pathname={`/${artist_data[4].path}`}
               image_url="images/artists/DOGWOOD_1.jpg"
               artist_name="DOGWOOD HEART"
             />
 
             <ArtistLink
-              id="-image"
+              id="fairylights-image"
               pathname={`/${artist_data[5].path}`}
               image_url="images/artists/FAIRYLIGHTS_2.jpg"
               artist_name="THE FAIRYLIGHTS"
