@@ -240,14 +240,6 @@ body .row2::after {
   margin-bottom: 55px;
 }
 
-html .row::after,
-body .row::after, html .row2::after,
-body .row2::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
 #artist-page-banner {
   width: 100%;
   margin-bottom: 100px;
@@ -436,13 +428,13 @@ body .row2::after {
   margin-bottom: 15px;
 }
 
-.artist-info-item-container #artist-releases-slider .release-slide .release-info .release-info-header .date {
-  font-weight: 100;
-}
-
 .artist-info-item-container #artist-releases-slider .release-slide .release-info .release-info-header .title {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 40px;
+}
+
+.artist-info-item-container #artist-releases-slider .release-slide .release-info .release-info-header .date {
+  font-weight: 100;
 }
 
 .artist-info-item-container #artist-releases-slider .release-slide .release-info .release-links .link-btn {

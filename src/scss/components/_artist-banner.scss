@@ -1,0 +1,75 @@
+
+
+#artist-page-banner {
+  width: 100%;
+  margin-bottom: 100px;
+
+  #artist-image-container {
+    @include box-shadow;
+    position: relative;
+    width: 100%;
+    max-height: 650px;
+    overflow: hidden;
+    z-index: 100;
+
+    .artist-page-image {
+      width: 100%;
+      display: block;
+    }
+
+    .artist-name-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 200px;
+      min-width: 200px;
+      height: 55px;
+      line-height: 55px;
+      padding: 0 10px 0 10px;
+      background: rgba(255, 255, 255, 0.81);
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+  }
+
+  #artist-links-container {
+    position: relative;
+    z-index: 10;
+
+    .artist-links {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 200px;
+
+      .artist-official-link {
+
+        @include box-shadow;
+        min-width: 100px;
+        height: 55px;
+        line-height: 58px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 10px 0 10px;
+        text-align: center;
+        background: white;
+        z-index: 10;
+
+      }
+
+      .artist-social-links {
+        @include box-shadow;
+        height: 55px;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 10px 0 10px;
+        background: white;
+
+      }
+
+    }
+
+  }
+
+}

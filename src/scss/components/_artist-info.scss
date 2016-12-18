@@ -1,0 +1,121 @@
+
+#artist-info-container {
+  position: relative;
+}
+
+.info-title {
+  margin: 0;
+  padding: 0;
+}
+
+.title-underline {
+  width: 60px;
+  border-bottom: 4px solid grey;
+}
+
+.coming-soon {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+.artist-info-item-container {
+  padding-left: 200px;
+  padding-right: 200px;
+
+  #artist-releases-slider {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    .release-slide {
+      width: 100%;
+      display: inline-block;
+      vertical-align: top;
+
+      .release-image {
+        display: inline-block;
+        vertical-align: top;
+
+        img {
+          height: 400px;
+        }
+
+      }
+
+      .release-info {
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 15px;
+
+        .release-info-header {
+          margin-top: 15px;
+          margin-bottom: 15px;
+
+          .title {
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 40px;
+          }
+
+          .date {
+            font-weight: 100;
+          }
+
+        }
+
+        .release-links .link-btn {
+          display: inline-block;
+          vertical-align: top;
+        }
+
+      }
+
+    }
+
+  }
+
+  #artist-videos {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .video {
+      margin-right: 15px;
+      width: 18vw;
+      height: 275px;
+    }
+
+  }
+
+  #artist-news {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .news_item {
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 15px;
+      width: 15vw;
+      height: 100%;
+
+      .title {
+        font-size: 15px;
+      }
+
+      img {
+        height: 150px;
+        display: inline-block;
+      }
+
+      .text {
+        font-size: 14px;
+      }
+
+    }
+
+  }
+
+}
