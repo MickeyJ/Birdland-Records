@@ -15,7 +15,7 @@ gulp.task('start',() =>{
   })
 });
 
-gulp.task('script',() =>{
+gulp.task('script',() => {
   browserify({
     entries: 'src/js/',
     extensions: ['.js'],
@@ -37,13 +37,13 @@ gulp.task('sass',() =>{
 });
 
 gulp.task('images',() =>{
-  gulp.src('src/images/artists/*.*')
+  gulp.src('src/images/**/*.*')
     .pipe((imagemin({
       optimizationLevel: 7,
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('./public/images/artists'));
+    .pipe(gulp.dest('./public/images/'));
 });
 
 gulp.task('watch',() =>{

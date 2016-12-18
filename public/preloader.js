@@ -55,7 +55,7 @@ window.addEventListener('load', function(){
 
   console.log(imageContainers);
 
-  setTimeout(function(){
+  // setTimeout(function(){
 
     for (var i = 0; i < imageContainers.length; i++) {
       imageContainers[i].appendChild(artists[i]);
@@ -63,6 +63,6 @@ window.addEventListener('load', function(){
       overlays[i].style.visibility = 'visible'
     }
 
-  }, windowLoadTime * 1.5);
+  // }, windowLoadTime * 1.5);
 
 });
